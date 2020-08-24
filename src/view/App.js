@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import logo from "../assets/logo.svg";
-import "./App.css";
 import { drawNewProblemInteractor } from "../interactor/drawNewProblem";
+import "./App.css";
 
 const App = () => {
   const [problem, setProblem] = useState();
@@ -10,12 +9,21 @@ const App = () => {
     setProblem(drawNewProblemInteractor());
   }, []);
 
+  const params = problem && problem.getParams();
+
   return (
     <div className="App">
       <header className="App-header">
         <h1>{problem && problem.getName()}</h1>
         <h2>Params</h2>
-        {problem && JSON.stringify(problem.getParams())}
+        {params &&
+          Object.keys(params).map((key) => {
+            return (
+              <span>
+                {key} : {params[key]}
+              </span>
+            );
+          })}
       </header>
     </div>
   );
