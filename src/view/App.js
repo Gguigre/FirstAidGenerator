@@ -13,7 +13,9 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <span>{problem && problem.getName()}</span>
+        <h1>{problem && problem.getName()}</h1>
+        <h2>Params</h2>
+        {problem && JSON.stringify(problem.getParams())}
       </header>
     </div>
   );
