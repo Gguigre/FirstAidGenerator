@@ -18,19 +18,22 @@ export class Wound {
 
   draw = () => {
     this.params = {
-      localisation: drawRandomElement([
-        "bras",
-        "jambe",
-        "thorax",
-        "abdomen",
-        "tête",
-      ]),
-      how: drawRandomElement(["couteau", "tournevis", "morsure de chien"]),
-      with: drawRandomElement([
-        "avec un gros objet",
-        "avec un petit objet",
-        "avec rien",
-      ]),
+      localisation: this.drawLocalisation(),
+      mean: this.drawMean(),
+      with: this.drawWith(),
     };
   };
+
+  drawLocalisation = () =>
+    drawRandomElement(["bras", "jambe", "thorax", "abdomen", "tête"]);
+
+  drawMean = () =>
+    drawRandomElement(["couteau", "tournevis", "morsure de chien"]);
+
+  drawWith = () =>
+    drawRandomElement([
+      "avec un gros objet",
+      "avec un petit objet",
+      "avec rien",
+    ]);
 }
