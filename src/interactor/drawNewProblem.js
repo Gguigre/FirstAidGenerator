@@ -6,6 +6,7 @@ import { AirwayObstruction } from "../entity/airwayObstruction";
 import { Malaise } from "../entity/malaise";
 import { Wound } from "../entity/wound";
 import { Burn } from "../entity/burn";
+import { LossOfConsciousness } from "../entity/lossOfConsciousness";
 
 export const drawNewProblemInteractor = (): Problem => {
   const problemType = drawRandomElement([
@@ -15,6 +16,7 @@ export const drawNewProblemInteractor = (): Problem => {
     Malaise,
     Wound,
     Burn,
+    LossOfConsciousness,
   ]);
   return new problemType();
 };
