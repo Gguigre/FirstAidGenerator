@@ -1,7 +1,7 @@
 import { drawRandomElement } from "../utils/drawRandomElement";
 
 export class Exsanguination implements Problem {
-  static NAME = "Hemorragie";
+  static NAME = "Hémorragie";
 
   params = {};
 
@@ -18,37 +18,28 @@ export class Exsanguination implements Problem {
   }
 
   draw() {
-    const random = Math.ceil(Math.random() * 3);
-    switch (random) {
-      case 1:
-        this.drawExternal();
-        break;
-      case 2:
-        this.drawInternal();
-        break;
-      case 3:
-        this.drawMemberCut();
-        break;
-      default:
-        this.drawExternal();
-    }
+    drawRandomElement([
+      this.drawExternal,
+      this.drawInternal,
+      this.drawMemberCut,
+    ])();
   }
 
-  drawExternal() {
+  drawExternal = () => {
     this.params = {
       type: "externe",
       location: drawRandomElement(["bras", "jambe", "aisselle"]),
     };
-  }
+  };
 
-  drawMemberCut() {
+  drawMemberCut = () => {
     this.params = {
       type: "section de membre",
       location: drawRandomElement(["doigt", "bras", "jambe"]),
     };
-  }
+  };
 
-  drawInternal() {
+  drawInternal = () => {
     this.params = {
       type: "interne externalisée ",
       location: drawRandomElement([
@@ -59,5 +50,5 @@ export class Exsanguination implements Problem {
         "anus",
       ]),
     };
-  }
+  };
 }
