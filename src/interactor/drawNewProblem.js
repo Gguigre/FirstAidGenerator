@@ -8,6 +8,7 @@ import { Wound } from "../entity/wound";
 import { Burn } from "../entity/burn";
 import { LossOfConsciousness } from "../entity/lossOfConsciousness";
 import { HeartAttack } from "../entity/heartAttack";
+import { Drowning } from "../entity/drowning";
 
 export const drawNewProblemInteractor = (): Problem => {
   const problemType = drawRandomElement([
@@ -19,6 +20,7 @@ export const drawNewProblemInteractor = (): Problem => {
     Burn,
     LossOfConsciousness,
     HeartAttack,
+    Drowning,
   ]);
   return new problemType();
 };
