@@ -1,6 +1,7 @@
 import { drawRandomElement } from "../utils/drawRandomElement";
+import { Problem } from "./problem";
 
-export class AirwayObstruction {
+export class AirwayObstruction implements Problem {
   static NAME = "Obstruction des voies aériennes";
   params = {};
 
@@ -15,6 +16,8 @@ export class AirwayObstruction {
   getParams() {
     return this.params;
   }
+
+  getWorsening = () => null;
 
   draw() {
     drawRandomElement([this.drawPartial, this.drawWhole])();

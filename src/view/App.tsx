@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { drawNewProblemInteractor } from "../interactor/drawNewProblem";
 import "./App.css";
+import { Problem } from "../entity/problem";
 
 const App = () => {
-  const [problem, setProblem] = useState();
+  const [problem, setProblem] = useState<Problem | null>();
 
   useEffect(() => {
     setProblem(drawNewProblemInteractor());
@@ -19,7 +20,7 @@ const App = () => {
         {params &&
           Object.keys(params).map((key) => {
             return (
-              <span>
+              <span key={key}>
                 {key} : {params[key]}
               </span>
             );

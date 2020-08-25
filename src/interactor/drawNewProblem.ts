@@ -3,7 +3,7 @@ import { drawRandomElement } from "../utils/drawRandomElement";
 import { Exsanguination } from "../entity/exsanguination";
 import { Trauma } from "../entity/trauma";
 import { AirwayObstruction } from "../entity/airwayObstruction";
-import { Malaise } from "../entity/malaise";
+import { Discomfort } from "../entity/discomfort";
 import { Wound } from "../entity/wound";
 import { Burn } from "../entity/burn";
 import { LossOfConsciousness } from "../entity/lossOfConsciousness";
@@ -15,7 +15,7 @@ export const drawNewProblemInteractor = (): Problem => {
     Exsanguination,
     Trauma,
     AirwayObstruction,
-    Malaise,
+    Discomfort,
     Wound,
     Burn,
     LossOfConsciousness,

@@ -1,6 +1,7 @@
 import { drawRandomElement } from "../utils/drawRandomElement";
+import { Problem } from "./problem";
 
-export class LossOfConsciousness {
+export class LossOfConsciousness implements Problem {
   static NAME = "Perte de conscience";
   params = {};
 
@@ -15,6 +16,8 @@ export class LossOfConsciousness {
   getParams() {
     return this.params;
   }
+
+  getWorsening = () => null;
 
   draw = () => {
     this.params = {

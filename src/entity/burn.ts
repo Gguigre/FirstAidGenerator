@@ -1,6 +1,7 @@
 import { drawRandomElement } from "../utils/drawRandomElement";
+import { Problem } from "./problem";
 
-export class Burn {
+export class Burn implements Problem {
   static NAME = "Brûlure";
   params = {};
 
@@ -15,6 +16,8 @@ export class Burn {
   getParams() {
     return this.params;
   }
+
+  getWorsening = () => null;
 
   draw = () => {
     const BURN_TYPES_WITH_LOCALISATION = [
