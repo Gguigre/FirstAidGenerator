@@ -19,6 +19,9 @@ const App = () => {
         <h2>Params</h2>
         {params &&
           Object.keys(params).map((key) => {
+            if (!params[key]) {
+              return null;
+            }
             return (
               <span key={key}>
                 {key} : {params[key]}
