@@ -1,5 +1,5 @@
-import { drawRandomElement } from "../utils/drawRandomElement";
-import { Problem } from "./problem";
+import { drawRandomElement } from "../../utils/drawRandomElement";
+import { Problem } from "../problem";
 
 export class Exsanguination implements Problem {
   static NAME = "Hémorragie";

@@ -1,5 +1,5 @@
-import { drawRandomElement } from "../utils/drawRandomElement";
-import { Problem } from "./problem";
+import { drawRandomElement } from "../../utils/drawRandomElement";
+import { Problem } from "../problem";
 
 export class Burn implements Problem {
   static NAME = "Brûlure";

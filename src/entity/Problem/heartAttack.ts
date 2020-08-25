@@ -1,8 +1,8 @@
-import { drawRandomElement } from "../utils/drawRandomElement";
-import { Problem } from "./problem";
+import { drawRandomElement } from "../../utils/drawRandomElement";
+import { Problem } from "../problem";
 
-export class Drowning implements Problem {
-  static NAME = "Noyade";
+export class HeartAttack implements Problem {
+  static NAME = "Arrêt cardiaque";
   params = {};
 
   constructor() {
@@ -10,7 +10,7 @@ export class Drowning implements Problem {
   }
 
   getName() {
-    return Drowning.NAME;
+    return HeartAttack.NAME;
   }
 
   getParams() {

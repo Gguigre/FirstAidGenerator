@@ -1,5 +1,5 @@
-import { drawRandomElement } from "../utils/drawRandomElement";
-import { Problem } from "./problem";
+import { drawRandomElement } from "../../utils/drawRandomElement";
+import { Problem } from "../problem";
 
 export class LossOfConsciousness implements Problem {
   static NAME = "Perte de conscience";

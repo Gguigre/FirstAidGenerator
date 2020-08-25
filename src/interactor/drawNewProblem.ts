@@ -1,14 +1,14 @@
 import { Problem } from "../entity/problem";
 import { drawRandomElement } from "../utils/drawRandomElement";
-import { Exsanguination } from "../entity/exsanguination";
-import { Trauma } from "../entity/trauma";
-import { AirwayObstruction } from "../entity/airwayObstruction";
-import { Discomfort } from "../entity/discomfort";
-import { Wound } from "../entity/wound";
-import { Burn } from "../entity/burn";
-import { LossOfConsciousness } from "../entity/lossOfConsciousness";
-import { HeartAttack } from "../entity/heartAttack";
-import { Drowning } from "../entity/drowning";
+import { Exsanguination } from "../entity/Problem/exsanguination";
+import { Trauma } from "../entity/Problem/trauma";
+import { AirwayObstruction } from "../entity/Problem/airwayObstruction";
+import { Discomfort } from "../entity/Problem/discomfort";
+import { Wound } from "../entity/Problem/wound";
+import { Burn } from "../entity/Problem/burn";
+import { LossOfConsciousness } from "../entity/Problem/lossOfConsciousness";
+import { HeartAttack } from "../entity/Problem/heartAttack";
+import { Drowning } from "../entity/Problem/drowning";
 
 export const drawNewProblemInteractor = (): Problem => {
   const problemType = drawRandomElement([
